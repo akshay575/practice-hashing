@@ -7,9 +7,9 @@ var input2 = {
     time: new Date().getTime().toString()
 }
 
-console.log(generateHash(input1));
-console.log(generateHash(JSON.stringify(input2)));
+console.log('Hash 1:', generateHash(input1).toString());
+console.log('Hash 2:', generateHash(JSON.stringify(input2)));
 
 function generateHash(input) {
-    return SHA256(input);
+    return SHA256(input).toString();
 }
